@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
-<body>
-    <h1>Lhuis Pagina Activa</h1>
+
+<body onclick="PlayAudio()">
+    <div class="noche">
+
+
+        <button class="switch" id="slider" type="checkbox" class="slider" id="enviar" onmousedown="sonido.play()">
+        </button>
+        </label>
+    </div>
+
+
+
+    <div class="contenido1">
+        <div class="tex-app-dos">
+            <h1>Aplicacion Lhuis</h1>
+        </div>
+        <div class="caja2">
+            <img class="img-cel" src="portada cel.pg" alt="">
+        </div>
+        <div class="caja1">
+            <div class="tex-app">
+                <h1>Aplicacion Lhuis</h1>
+            </div>
+            <div class="tex">
+                <p>Que onda Rey te invitamos a que pruebes mi aplicacion en la Google Play Store, Disfruta de las
+                    múltiples opciones como ver peliculas series y muchos juegos. Esta pagina esta subida a los
+                    repositorio de  <a class="git" onmousedown="sonido.play()" href="https://github.com/ruizlhuis" target="_blank">Github</a> para mas confianza.
+                </p>
+            </div>
+            <div class="qr-bt">
+                <div class="bt">
+                    <a href="https://play.google.com/store/apps/details?id=lhuis.appipu&hl=es_419" target="_blank">
+                        <button class="contact100-form-btn" id="enviar" onmousedown="sonido.play()">Ver En Play
+                            Store</button></a>
+                    <a href="https://lhuisruiz.github.io/lhuis/" target="_blank"><button
+                            class="contact100-form-btn" id="enviar" onmousedown="sonido.play()">Ver En la
+                            web</button></a>
+                </div>
+                <div class="qr-img">
+                    <img class="img-qr-play" src="qr-code.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="musica1" autoplay loop>
+        <source src="y2mate.com - Hermitude  The Buzz feat Mataya Young Tapz Bass Boosted3D AudioUse Headphones.mp3"
+            type="audio/mpeg">
+    </audio>
+    <div>
+    </div>
+    <div></div>
+    <script>
+        var sonido = new Audio();
+        sonido.src = "sonido.mp3";
+
+    </script>
+
+    <script>
+        function PlayAudio() {
+            document.getElementById("musica1").play();
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            let allDivs = document.querySelectorAll("div")
+
+            allDivs[allDivs.length - 1].innerHTML = ""
+
+        })
+
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
